@@ -5,7 +5,7 @@ import AI_search.helpers.helper.Route as Route
 import AI_search.helpers.helper.findNodeInQueue as findNodeInQueue
 import AI_search.helpers.helper.fetchgcost as fetchgcost
 
-# A* search and Uniform cost search
+# A* search and Uniform cost search reuse same utility
 def informed_search(graphObj, startNodeObj, goalNodeObj, startNode_gcost, startNode_hcost, costFunction):
     nodeDict = graphObj.graphDict
     open_q = []
@@ -28,7 +28,6 @@ def informed_search(graphObj, startNodeObj, goalNodeObj, startNode_gcost, startN
         children = nodeDict[node_tuple.node]
         for edge in children:
             childFromOpenQueue = findNodeInQueue(open_q, edge.child)
-            # currentParentFromOpenQueue = findNodeInQueue(open_q, node_tuple.node)
             if not childFromOpenQueue and not edge.child in closed:
                 # cost calculation from closed
                 order += 1
@@ -43,7 +42,6 @@ def informed_search(graphObj, startNodeObj, goalNodeObj, startNode_gcost, startN
                 if childFromOpenQueue.fcost > currentCost:
                     newPriority = Priority(currentCost, order, edge.child, fetchgcost(node_tuple, edge),
                                            node_tuple.node)
-                    # **** open_q.index(childFromOpenQueue) will gove index.. no need for loop
                     for i in open_q:
                         if newPriority.node == i.node:
                             indexValue = open_q.index(i)

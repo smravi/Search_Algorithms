@@ -1,4 +1,6 @@
-A 0
-B 1
-D 2
-F 3
+JordanHome 0
+CA73/NewportCoastDr 5
+I405/CA73 15
+I110/I405 40
+I10/I110 60
+StaplesCenter 63

@@ -64,4 +64,4 @@ def bfs_search(graphObj, startNodeObj, goalNodeObj):
                         minPathToNode[edge.child] = decidePath(graphObj.graphDict, minPathToNode[edge.child],
                                                                newPathList)
 
-    return resultMinPath  # this contains only path now. I have to fit in the cost
+    return resultMinPath
