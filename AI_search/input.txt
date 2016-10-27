@@ -1,0 +1,23 @@
+BFS
+A
+F
+11
+A B 5
+A C 15
+B D 100
+B C 30
+C E 30
+D E 20
+D I 5
+D F 10
+E F 15
+C B 10
+I F 5
+7
+A 50
+B 0
+C 35
+D 5
+E 10
+I 3
+F 0
